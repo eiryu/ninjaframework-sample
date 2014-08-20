@@ -1,0 +1,61 @@
+<html>
+<head>
+    <title>ユーザー登録 : 入力</title>
+    <script src="/assets/webjars/jquery/1.9.0/jquery.js"></script>
+    <meta charset="utf-8">
+    <link href="/assets/webjars/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>ユーザー登録 : 入力</h1>
+
+            <form method="post" action="/user/register/confirm/" class="form-horizontal">
+
+                <#if (violations)??>
+                <div class="text-warning">
+                    <ul>
+                    <#list violations as violation>
+                        <li>${violation.constraintViolation.messageKey}</li>
+                    </#list>
+                    </ul>
+                </div>
+                </#if>
+
+
+                <div class="form-group">
+                    <label for="name">名前</label>
+                    <div class="col-sm-5">
+                        <input type="text" name="name" class="form-control" id="name">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>性別</label>
+                    <div>
+                        <label class="checkbox-inline">
+                            <input type="radio" name="sex" value="MALE">男性
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="radio" name="sex" value="FEMALE">女性
+                        </label>
+                    </div>
+                </div>
+                <!--<div>-->
+                    <!--<span>スキル</span>-->
+                    <!--<span><input type="checkbox" name="skill" value="1" id="skill1"><label for="skill1">Java</label></span>-->
+                    <!--<span><input type="checkbox" name="skill" value="2" id="skill2"><label for="skill2">Scala</label></span>-->
+                    <!--<span><input type="checkbox" name="skill" value="3" id="skill3"><label for="skill3">Groovy</label></span>-->
+                <!--</div>-->
+
+                <!--<div>-->
+                    <!--<span><input type="radio" name="sexenum" value="MALE" id="sexenum"><label for="sexenum">おとこ</label></span>-->
+                <!--</div>-->
+
+                <button type="submit" class="btn btn-primary">次へ</button>
+
+            </form>
+        </div>
+    </div>
+</body>
+</html>

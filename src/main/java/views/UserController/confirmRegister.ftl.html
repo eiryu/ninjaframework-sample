@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>ユーザー登録 : 確認</title>
+    <script src="/assets/webjars/jquery/1.9.0/jquery.js"></script>
+    <meta charset="utf-8">
+    <link href="/assets/webjars/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row form-horizontal">
+            <h1>ユーザー登録 : 確認</h1>
+
+            <!--<div>-->
+                <!--<span>名前:</span><span>${user.name}</span>-->
+            <!--</div>-->
+            <!--<div>-->
+                <!--<span>性別:</span><span>${sex.label}</span>-->
+            <!--</div>-->
+            <div class="form-group">
+                <label class="control-label">名前</label>
+                <div class="col-sm-5">
+                    <p class="form-control-static">${user.name}</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label">性別</label>
+                <div class="col-sm-5">
+                    <p class="form-control-static">${sex.label}</p>
+                </div>
+            </div>
+
+            <form method="post" action="/user/register/complete/">
+                <button type="submit" class="btn btn-primary">登録</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
